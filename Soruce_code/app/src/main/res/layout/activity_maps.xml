@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <Button
+        android:id="@+id/btn_showList"
+        android:textSize="18sp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:text="Show List"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <fragment
+        android:elevation="5dp"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.ui.MapsActivity"/>
+
+    <ProgressBar
+        android:elevation="10dp"
+        android:id="@+id/proggress_bar_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:text="getting data from server ..."
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/proggress_bar_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:id="@+id/tv_loading"
+        />
+
+</RelativeLayout>
